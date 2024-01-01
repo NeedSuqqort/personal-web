@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
 
+const env = process.env.NODE_ENV;
+
 const manifestJSON: Partial<VitePWAOptions> = {
   registerType: "prompt",
   includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
@@ -45,7 +47,7 @@ const manifestJSON: Partial<VitePWAOptions> = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/personal-web/",
+  base: `/${env === "production" ? "personal-web/": ""}`,
   plugins: [react(), VitePWA(manifestJSON)],
   server:{
     port: 3000,

@@ -34,7 +34,9 @@ function MainPage() {
         }}>
           Turn on notifications for the website</button>
         <button className="disabled cursor-not-allowed">No</button>
-        <Link to={"/data"} className="button"><button className='data'>Go to data page</button></Link>
+        <Link to={"/data"} className="button">
+          <button className='data'>Go to data page</button>
+        </Link>
       </div>
       <button className="toggle-lightdark" onClick={ToggleLightDark}>{mode} mode</button>
       <Outlet />

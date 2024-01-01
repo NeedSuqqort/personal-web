@@ -1,6 +1,6 @@
 const CACHE_NAME = 'pwa-cache-v1'
 const urlsToCache = [
-    '/','/index.html','index.css','main.tsx'
+    `/${process.env.NODE_ENV === "production" ? "personal-web/": ""}`,'/index.html','index.css','main.tsx'
 ];
 
 self.addEventListener('install', event => {
