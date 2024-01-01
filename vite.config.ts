@@ -45,7 +45,7 @@ const manifestJSON: Partial<VitePWAOptions> = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
+  base: "/personal-web/",
   plugins: [react(), VitePWA(manifestJSON)],
   server:{
     port: 3000,
