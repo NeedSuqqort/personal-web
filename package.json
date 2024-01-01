@@ -2,7 +2,7 @@
   "name": "personal-web",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://needsuqqort.github.io/personal-web/",
+  "homepage": "https://needsuqqort.github.io",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
