@@ -41,7 +41,7 @@ function MainPage() {
           <button className='data'>Learn more about me</button>
         </Link>
       </div>
-      <button className="toggle-lightdark" onClick={ToggleLightDark}>{mode} mode</button>
+      <button className="toggle-lightdark" onClick={ToggleLightDark}>Change to {mode} mode</button>
       <Outlet />
     </> 
   )

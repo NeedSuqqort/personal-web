@@ -7,7 +7,7 @@ const Data = () => {
         <>
             <div className="space-y-4">
                 <h1 className="text-3xl text-yellow-600 font-bold">About me</h1>
-                <div className="bg-sky-500 w-[900px] m-auto rounded-xl m-auto mb-2 py-4">
+                <div className="bg-[#6C3483] w-[900px] m-auto rounded-xl m-auto mb-2 py-4">
                     <h2 className="name">Name: Oscar Law</h2>
                     <h2 className="ign">In-game name: NeedSupport</h2>
                     <h2 className="intro">Description: </h2>

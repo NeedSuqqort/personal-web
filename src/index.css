@@ -29,7 +29,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -70,16 +70,16 @@ button:focus-visible {
 
 .light-mode {
   /* Light mode styles */
-  --color-text: #213547;
-  --color-background: #ffffff;
+  --color-text: #22313f;
+  --color-background: #fafafa;
   --color-hover: #747bff;
-  --color-button: #f5f5f5;
+  --color-button: #e2eff1;
 }
 
 .dark-mode {
   /* Dark mode styles */
-  --color-text: #ffffff;
-  --color-background: #272727;
+  --color-text: #8dc6ff;
+  --color-background: #363636;
   --color-hover: #747bff;
   --color-button: #717171;
 }

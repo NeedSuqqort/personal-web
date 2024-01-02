@@ -4,9 +4,11 @@ import NotFound from './NotFound';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 
+export const env = process.env.NODE_ENV;
+
 function App() {
-  const env = process.env.NODE_ENV;
   console.log(env);
+  console.log(navigator);
 
   const mode = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "Light" : "Dark");
   useEffect(() => {
