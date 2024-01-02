@@ -29,7 +29,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -37,6 +37,15 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0 0 2rem 0;
+}
+
+h2 {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  text-align: left; 
+  /* text-indent: 2rem;  */
+  margin: 1rem 0 1rem 1.5rem;
 }
 
 button {
@@ -88,3 +97,4 @@ button {
   background-color: var(--color-button);
   color: var(--color-text);
 }
+
