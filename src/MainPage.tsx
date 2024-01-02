@@ -4,14 +4,6 @@ import "./App.css";
 
 function MainPage() {
   const [stat, setStat] = useState("online");
-  const [mode,setmode] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches ? "Light" : "Dark");
-
-  const ToggleLightDark = () => {
-      const page = document.querySelector('html');
-      page?.classList.toggle('light-mode');
-      page?.classList.toggle('dark-mode');
-      setmode(mode === "Light" ? "Dark" : "Light");
-  }
 
   return (
     <>
@@ -41,7 +33,7 @@ function MainPage() {
           <button className='data'>Learn more about me</button>
         </Link>
       </div>
-      <button className="toggle-lightdark" onClick={ToggleLightDark}>Change to {mode} mode</button>
+      
       <Outlet />
     </> 
   )

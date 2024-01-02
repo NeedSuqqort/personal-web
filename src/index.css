@@ -68,12 +68,27 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.infobox{
+  background-color: var(--color-info-bg);
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
 .light-mode {
   /* Light mode styles */
   --color-text: #22313f;
   --color-background: #fafafa;
   --color-hover: #747bff;
   --color-button: #e2eff1;
+  --color-info-bg: #0fc9e7;
 }
 
 .dark-mode {
@@ -82,6 +97,7 @@ button:focus-visible {
   --color-background: #363636;
   --color-hover: #747bff;
   --color-button: #717171;
+  --color-info-bg: #6C3483;
 }
 
 body {
