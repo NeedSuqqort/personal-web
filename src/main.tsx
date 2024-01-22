@@ -1,7 +1,7 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.css'
+import {ChakraProvider} from '@chakra-ui/react'
+import React from 'react';
 
 const sw_file = process.env.NODE_ENV === 'development' ? "./src/" : "./";
 
@@ -17,6 +17,8 @@ if("serviceWorker" in navigator){
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  </React.StrictMode>
 )

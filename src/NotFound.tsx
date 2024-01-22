@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Button, Box } from "@chakra-ui/react";
 import "./index.css";
 
 const NotFound = () => {
@@ -6,12 +7,14 @@ const NotFound = () => {
 
     return(
         <div className="NotFound">
-            <h1 className="text-3xl text-blue-600 font-bold">
+            <h1 className="text-3xl text-blue-600 text-center font-bold my-5">
                 Sorry, the page you are looking for does not exist.
             </h1>
-            <button className="go-back-button" onClick={() => navigate(-1)}>
-                Go back to the main page
-            </button>
+            <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
+                <Button className="justify-self-center" colorScheme="blue" onClick={() => navigate("/")}>
+                    Go back to the main page
+                </Button>
+            </Box>
         </div>
     )
 }

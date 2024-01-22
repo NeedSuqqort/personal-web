@@ -1,43 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+Text,p,h1,h2,.waviy{
+  user-select: none;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.line{
+  border: none;
+  height: 12px;
+  background: black;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
-  min-height: 100vh;
+.layout {
+  position: relative;
+  background-size: 200%;
+  animation: bgGradient 4s ease-in-out infinite;
+  background: linear-gradient(to bottom right, #d2f7ff, #e565ff);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin: 0 0 2rem 0;
+Button{
+  margin-right: 1em;
+  font-family: "Arial", monospace;
 }
 
 h2 {
@@ -45,72 +30,92 @@ h2 {
   font-weight: bold;
   text-align: left; 
   /* text-indent: 2rem;  */
-  margin: 1rem 0 1rem 1.5rem;
+  margin: 1rem 1.5rem 1rem 1.5rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin: 5px 2px 2px 5px;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+pre {
+  text-align: left;
+  text-indent: 2rem;
+  margin: 1.5rem 1rem 1rem 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-wrap: wrap;
+  font-size: 1.25rem;
 }
 
-.infobox{
-  background-color: var(--color-info-bg);
-  width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.75rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  justify-content: center;
+li {
+  list-style-type: disc;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
-.light-mode {
-  /* Light mode styles */
-  --color-text: #22313f;
-  --color-background: #fafafa;
-  --color-hover: #747bff;
-  --color-button: #e2eff1;
-  --color-info-bg: #0fc9e7;
+.about-subheading {
+  justify-self: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
-.dark-mode {
-  /* Dark mode styles */
-  --color-text: #8dc6ff;
-  --color-background: #363636;
-  --color-hover: #747bff;
-  --color-button: #717171;
-  --color-info-bg: #6C3483;
+.intro{
+  /* text-transform: uppercase; */
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1s linear infinite;
+  display: inline-block;
 }
 
-body {
-  color: var(--color-text);
-  background-color: var(--color-background);
+@keyframes textclip {
+  to {
+    background-position: 100% center;
+  }
 }
 
-a:hover {
-  color: var(--color-hover);
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,0.3));
+  font-size: 120px;
+}
+.waviy span {
+  /* font-family: 'Alfa Slab One', cursive; */
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  text-transform: uppercase;
+  animation: waviy 2s infinite;
+  background: linear-gradient(to bottom right, #ffffff, #ad00ff 45%, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-button {
-  background-color: var(--color-button);
-  color: var(--color-text);
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@keyframes bgGradient {
+  0%,100% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 200% 200%;
+  }
 }
 
