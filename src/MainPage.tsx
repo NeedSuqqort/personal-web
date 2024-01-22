@@ -1,7 +1,8 @@
-import { Button, Box, Text, Spacer, Flex } from "@chakra-ui/react";
+import { Button, Box, Spacer, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import Intro from "./Intro";
 
 function MainPage() {
   // const [stat, setStat] = useState("online");
@@ -63,14 +64,8 @@ function MainPage() {
         </Text>
       } */}
       <Spacer my={35} />
+      <Intro />
       <Box px={20} textAlign={"center"}>
-        <Text className="text-wrap text-2xl first-letter:font-bold first-letter:text-7xl spacing-y-2 intro">
-          Oscar Law, a year 3 computer science student. My studies focus on
-          software engineering and artifical intelligence. I am currently
-          gaining industrial experience as an programming intern and look
-          forward to working with more projects and gain more hands-on
-          industrial experience.
-        </Text>
         <Link to={"about"}>
           <Button
             my={10}

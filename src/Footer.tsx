@@ -8,8 +8,12 @@ const Footer = () => {
     <Flex px={20} py={6} mt={6} bg={"orange"}>
       <Stack direction="column">
         <Text>Oscar Law's personal web</Text>
-        <Link to="/">Main page</Link>
-        <Link to="/about">My profile</Link>
+        <Link to="/">
+          <Text>Main page</Text>
+        </Link>
+        <Link to="/about">
+          <Text>My profile</Text>
+        </Link>
         <Spacer />
         <Text>© {date.getFullYear()} Oscar Law. All rights reserved.</Text>
       </Stack>

@@ -22,3 +22,10 @@ export const projectData = [
     url: "",
   },
 ];
+
+export const mainPageIntro = [
+  " Oscar Law, a year 3 computer science student.",
+  " My studies focus on software engineering and artificial intelligence.",
+  " I am currently gaining industrial experience as a programming intern.",
+  " I look forward to working with more projects and gaining more hands-on industrial experience.",
+];
