@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Intro from "./Intro";
+import { mainPageIntro } from "./constants";
 
 function MainPage() {
   // const [stat, setStat] = useState("online");
@@ -64,7 +65,11 @@ function MainPage() {
         </Text>
       } */}
       <Spacer my={35} />
-      <Intro />
+      <Intro
+        words={mainPageIntro}
+        id="text"
+        colors={["#0033cc", "#ff0066", "#00802b", "#ff9900"]}
+      />
       <Box px={20} textAlign={"center"}>
         <Link to={"about"}>
           <Button
