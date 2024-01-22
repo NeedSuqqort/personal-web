@@ -10,6 +10,7 @@ To view this app locally, run the following commands after clone:
     npm run dev
 
 Run this before pushing (prettier to format the code)
+
     npx prettier . --write
 
 # There might be some other features in the future
