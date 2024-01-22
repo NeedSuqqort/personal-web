@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
 
 const manifestJSON: Partial<VitePWAOptions> = {
@@ -8,7 +8,8 @@ const manifestJSON: Partial<VitePWAOptions> = {
   manifest: {
     name: "NeedSupport's Personal Web",
     short_name: "NeedSupport PWA",
-    description: "NeedSupport's first personal web in PWA with random features to record my \
+    description:
+      "NeedSupport's first personal web in PWA with random features to record my \
     learning progress in front-end development",
     icons: [
       {

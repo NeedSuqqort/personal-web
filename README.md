@@ -7,7 +7,9 @@ It is a progressive web application (PWA) as a record of my learning progress in
 To view this app locally, run the following commands after clone:
 
     npm install
-    npm run dev 
+    npm run dev
 
-# There might be some other features in the future 
+Run this before pushing (prettier to format the code)
+    npx prettier . --write
 
+# There might be some other features in the future
