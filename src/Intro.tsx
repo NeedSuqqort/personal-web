@@ -6,7 +6,7 @@ interface IntroTextProps {
   colors?: string[];
 }
 
-const ConsoleText: React.FC<IntroTextProps> = ({
+const Intro: React.FC<IntroTextProps> = ({
   words,
   id,
   colors = ["#595959"],
@@ -14,9 +14,11 @@ const ConsoleText: React.FC<IntroTextProps> = ({
   const [letterCount, setLetterCount] = useState(1);
   const [x, setX] = useState(1);
   const [waiting, setWaiting] = useState(false);
+  const [isTyping, setTyping] = useState(true);
 
   useEffect(() => {
     const target = document.getElementById(id);
+    const typingInterval: number = 80;
 
     if (target) {
       const intervalText = setInterval(() => {
@@ -33,7 +35,7 @@ const ConsoleText: React.FC<IntroTextProps> = ({
             target.setAttribute("style", `color: ${colors[0]}`);
             setLetterCount((count) => count + x);
             setWaiting(false);
-          }, 250);
+          }, typingInterval);
         } else if (letterCount === words[0].length + 1 && waiting === false) {
           // the current sentence finishes
           setWaiting(true);
@@ -41,25 +43,29 @@ const ConsoleText: React.FC<IntroTextProps> = ({
             setX(-1);
             setLetterCount((count) => count + x);
             setWaiting(false);
-          }, 250);
+          }, typingInterval);
         } else if (waiting === false) {
           // in the middle of a sentence
           target.innerHTML = words[0].substring(0, letterCount);
           setLetterCount((count) => count + x);
         }
-      }, 80);
+        setTyping((prevTyping) => !prevTyping);
+      }, typingInterval);
 
       return () => {
         clearInterval(intervalText);
       };
     }
-  }, [colors, id, letterCount, waiting, words, x]);
+  }, [colors, id, waiting, words, x, letterCount]);
 
   return (
     <div className="text-4xl text-center h-[200px] w-full mt-[120px] block">
       <span id={id}></span>
+      <div className={`underscore ${isTyping ? "opacity-0" : ""}`} id="console">
+        &#95;
+      </div>
     </div>
   );
 };
 
-export default ConsoleText;
+export default Intro;

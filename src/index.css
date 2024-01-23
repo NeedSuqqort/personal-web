@@ -109,3 +109,11 @@ li {
   font-weight: bold;
   font-family: "Arial";
 }
+
+.underscore {
+  position: relative;
+  display: inline-block;
+  left: 10px;
+  color: white;
+  font-size: 4rem;
+}
