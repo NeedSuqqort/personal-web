@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 interface IntroTextProps {
   words: string[];
@@ -15,6 +15,14 @@ const Intro: React.FC<IntroTextProps> = ({
   const [x, setX] = useState(1);
   const [waiting, setWaiting] = useState(false);
   const [isTyping, setTyping] = useState(true);
+  const [rendered, setrender] = useState(0);
+  const index = useRef(0);
+
+  function moveToNext() {
+    if (rendered % 2 === 0) {
+      index.current = (index.current + 1) % words.length;
+    }
+  }
 
   useEffect(() => {
     const target = document.getElementById(id);
@@ -25,18 +33,20 @@ const Intro: React.FC<IntroTextProps> = ({
         if (letterCount === 0 && waiting === false) {
           // Ready to print the next sentence.
           setWaiting(true);
-          target.innerHTML = words[0].substring(0, letterCount);
+          target.innerHTML = words[index.current].substring(0, letterCount);
+          setrender((render) => render + 1);
+          moveToNext();
           setTimeout(() => {
-            const usedColor = colors.shift();
-            colors.push(usedColor!);
-            const usedWord = words.shift();
-            words.push(usedWord!);
+            console.log(index.current);
             setX(1);
-            target.setAttribute("style", `color: ${colors[0]}`);
+            target.setAttribute("style", `color: ${colors[index.current]}`);
             setLetterCount((count) => count + x);
             setWaiting(false);
           }, typingInterval);
-        } else if (letterCount === words[0].length + 1 && waiting === false) {
+        } else if (
+          letterCount === words[index.current].length + 1 &&
+          waiting === false
+        ) {
           // the current sentence finishes
           setWaiting(true);
           setTimeout(() => {
@@ -46,7 +56,7 @@ const Intro: React.FC<IntroTextProps> = ({
           }, typingInterval);
         } else if (waiting === false) {
           // in the middle of a sentence
-          target.innerHTML = words[0].substring(0, letterCount);
+          target.innerHTML = words[index.current].substring(0, letterCount);
           setLetterCount((count) => count + x);
         }
         setTyping((prevTyping) => !prevTyping);

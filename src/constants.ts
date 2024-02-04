@@ -29,3 +29,5 @@ export const mainPageIntro = [
   " I am currently gaining industrial experience as a programming intern.",
   " I look forward to working with more projects and gaining more hands-on industrial experience.",
 ];
+
+// const palette = ["#EEE2DF","#EED7C5","#C89F9C","#C97C5D","#B36A5E"]

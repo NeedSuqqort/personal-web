@@ -22,7 +22,7 @@ span,
   position: relative;
   background-size: 200%;
   animation: bgGradient 4s ease-in-out infinite;
-  background: linear-gradient(to bottom right, #d2f7ff, #e565ff);
+  background: linear-gradient(to bottom right, #eed7c5, #eee2df);
 }
 
 Button {
@@ -65,7 +65,7 @@ li {
 .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
-  font-size: 120px;
+  font-size: 160px;
 }
 .waviy span {
   /* font-family: 'Alfa Slab One', cursive; */
@@ -74,7 +74,7 @@ li {
   color: #000000;
   text-transform: uppercase;
   animation: waviy 2s infinite;
-  background: linear-gradient(to bottom right, #ffffff, #ad00ff 45%, #00d4ff);
+  background: linear-gradient(to bottom, #416788, #7389ae 45%, #81d2c7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -96,7 +96,7 @@ li {
     background-size: 100% 100%;
   }
   50% {
-    background-size: 200% 200%;
+    background-size: 300% 300%;
   }
 }
 

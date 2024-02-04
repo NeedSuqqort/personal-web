@@ -1,15 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Spacer, Flex } from "@chakra-ui/react";
 import { topicsInterested } from "./constants";
 import "./index.css";
 import Projects from "./Projects";
+import { useInView } from "framer-motion";
 
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const navigate = useNavigate();
+  const pos = useRef(null);
+  const inView = useInView(pos, { once: true });
+  console.log(inView);
 
   return (
     <Box minHeight={"100vh"}>

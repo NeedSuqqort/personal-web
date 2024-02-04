@@ -5,7 +5,7 @@ const Footer = () => {
   const date = new Date();
 
   return (
-    <Flex px={20} py={6} mt={6} bg={"orange"}>
+    <Flex px={20} py={6} mt={6} bg={"#C89F9C"}>
       <Stack direction="column">
         <Text>Oscar Law's personal web</Text>
         <Link to="/">

@@ -3,12 +3,13 @@ import { SunIcon, MoonIcon, EmailIcon } from "@chakra-ui/icons";
 import "./index.css";
 import { useState } from "react";
 import { socials } from "./constants";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isDark, setDark] = useState(true);
 
   return (
-    <Box bg="#87CEEB" className="mb-6 sticky top-0 z-50">
+    <Box className="mb-6 sticky top-0 z-50">
       <Flex
         p={[6, 5, 6, 5]}
         direction="row"
@@ -16,9 +17,11 @@ export default function Header() {
         maxH={"10vh"}
         alignContent={"center"}
       >
-        <Heading textAlign="center" className="w-1/10 lg:w-[55%]" mx="5">
-          Oscar Law's Personal Space
-        </Heading>
+        <Link to={"/"} className="w-1/10 lg:w-[55%]">
+          <Heading textAlign="center" mx={5}>
+            Oscar Law's Personal Space
+          </Heading>
+        </Link>
         <Stack direction={"row"} align={"center"}>
           <a href={socials.email} target="_blank">
             <Button color="blackAlpha" variant="solid" leftIcon={<EmailIcon />}>

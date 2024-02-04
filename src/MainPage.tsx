@@ -68,7 +68,7 @@ function MainPage() {
       <Intro
         words={mainPageIntro}
         id="text"
-        colors={["#0033cc", "#ff0066", "#00802b", "#ff9900"]}
+        colors={["#C97C5D", "#B36A5E", "#EF7A85", "#DC758F"]}
       />
       <Box px={20} textAlign={"center"}>
         <Link to={"about"}>
