@@ -9,7 +9,7 @@ export default function Header() {
   const [isDark, setDark] = useState(true);
 
   return (
-    <Box className="mb-6 sticky top-0 z-50">
+    <Box className="mb-6 top-0 z-50">
       <Flex
         p={[6, 5, 6, 5]}
         direction="row"
