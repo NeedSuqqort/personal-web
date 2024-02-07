@@ -49,8 +49,8 @@ const About = () => {
           </Box>
         </Section>
 
-        <Box py={40}>
-          <hr className="line" />
+        <Box py={20}>
+          <hr className="line hidden" />
         </Box>
 
         <Section>
@@ -80,8 +80,8 @@ const About = () => {
           </Box>
         </Section>
 
-        <Box py={40}>
-          <hr className="line" />
+        <Box py={20}>
+          <hr className="line hidden" />
         </Box>
 
         <Section>
@@ -110,15 +110,15 @@ const About = () => {
           </Box>
         </Section>
 
-        <Box py={40}>
-          <hr className="line" />
+        <Box py={20}>
+          <hr className="line hidden" />
         </Box>
 
         <Section>
           <Projects />
         </Section>
 
-        <Spacer />
+        <Spacer py={20} />
         <div className="flex justify-center">
           <Button
             className="flex place-self-center"

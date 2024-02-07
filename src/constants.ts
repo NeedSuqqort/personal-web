@@ -17,8 +17,15 @@ export const projectData = [
   {
     id: 1,
     title: "Semtron website",
-    desc: "The website for an electronic company. I participated in adding new content and features.",
+    desc: "The website for a mirco-electronic company. I participated in adding new content and features.",
     tools: ["Typescript", "React.js", "Next.js", "Framer Motion"],
+    url: "",
+  },
+  {
+    id: 2,
+    title: "ElmaGPT",
+    desc: "A platform for using ChatGPT and DALL-E with a Live2D model",
+    tools: ["Typescript", "React.js", "Tailwind CSS"],
     url: "",
   },
 ];
