@@ -1,9 +1,9 @@
-import { Button, Box, Spacer, Flex } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box, Spacer, Flex } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Intro from "./Intro";
 import { mainPageIntro } from "./constants";
+import Section from "./Section";
+import About from "./About";
 
 function MainPage() {
   // const [stat, setStat] = useState("online");
@@ -70,7 +70,10 @@ function MainPage() {
         id="text"
         colors={["#C97C5D", "#B36A5E", "#EF7A85", "#DC758F"]}
       />
-      <Box px={20} textAlign={"center"}>
+      <Section>
+        <About />
+      </Section>
+      {/* <Box px={20} textAlign={"center"}>
         <Link to={"about"}>
           <Button
             my={10}
@@ -82,7 +85,7 @@ function MainPage() {
             Learn more about me
           </Button>
         </Link>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

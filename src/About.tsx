@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import { Box, Button, Spacer, Flex } from "@chakra-ui/react";
+import { Box, Spacer, Flex } from "@chakra-ui/react";
 import { topicsInterested } from "./constants";
 import "./index.css";
 import Projects from "./Projects";
@@ -11,17 +10,13 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const navigate = useNavigate();
   const pos = useRef(null);
   const inView = useInView(pos, { once: true });
   console.log(inView);
 
   return (
     <Box minHeight={"100vh"}>
-      <div className="space-y-4 items-center px-8 py-6">
-        <h1 className="text-3xl text-center text-yellow-600 font-bold">
-          About me
-        </h1>
+      <div className="space-y-4 items-center py-6">
         <Section>
           <p className="about-subheading">Personal info</p>
           <Box className="rounded-3xl" p={5} my={10}>
@@ -72,7 +67,7 @@ const About = () => {
                 </li>
                 <li>
                   <strong className="text-pink-500">
-                    Dean's List in 2022 Fall Term
+                    Dean's List in 2022 and 2023 Fall Term
                   </strong>
                 </li>
               </ul>
@@ -97,13 +92,17 @@ const About = () => {
               <h2 className="text-left">
                 Programmer Intern, TURNED-E! Company
               </h2>
-              <h2 className="text-right">Dec 2023 - Present</h2>
+              <h2 className="text-right">Dec 2023 - Feb 2024</h2>
             </Flex>
             <pre>
               <ul>
                 <li>
                   Gained hands-on experience on front-end developement and in
                   touch with production code.
+                </li>
+                <li>
+                  Learnt some of the practices for software development projects
+                  and Git/GitHub
                 </li>
               </ul>
             </pre>
@@ -117,19 +116,7 @@ const About = () => {
         <Section>
           <Projects />
         </Section>
-
         <Spacer py={20} />
-        <div className="flex justify-center">
-          <Button
-            className="flex place-self-center"
-            colorScheme="blue"
-            variant="outline"
-            onClick={() => navigate("/")}
-            my={10}
-          >
-            Go back to the main page
-          </Button>
-        </div>
       </div>
     </Box>
   );

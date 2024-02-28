@@ -17,8 +17,8 @@ export const projectData = [
   {
     id: 1,
     title: "Semtron website",
-    desc: "The website for a mirco-electronic company. I participated in adding new content and features.",
-    tools: ["Typescript", "React.js", "Next.js", "Framer Motion"],
+    desc: "The website for a micro-electronic company. I participated in adding new content and features.",
+    tools: ["Typescript", "React.js", "Next.js"],
     url: "",
   },
   {

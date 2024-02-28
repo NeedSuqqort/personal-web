@@ -28,6 +28,8 @@ const Intro: React.FC<IntroTextProps> = ({
     const target = document.getElementById(id);
     const typingInterval: number = 80;
 
+    target?.setAttribute("style", `color: ${colors[index.current]}`);
+
     if (target) {
       const intervalText = setInterval(() => {
         if (letterCount === 0 && waiting === false) {
@@ -39,6 +41,7 @@ const Intro: React.FC<IntroTextProps> = ({
           setTimeout(() => {
             console.log(index.current);
             setX(1);
+            console.log(colors[index.current]);
             target.setAttribute("style", `color: ${colors[index.current]}`);
             setLetterCount((count) => count + x);
             setWaiting(false);

@@ -14,7 +14,7 @@ export default function Projects() {
             my={4}
           >
             <Heading fontSize={"2xl"}>{project.title}</Heading>
-            <Text className="indent-6">{project.desc}</Text>
+            <pre className="indent-6">{project.desc}</pre>
             <Flex px={6}>
               <Text>Language/Frameworks: </Text>
               {project.tools.map((tool) => (
