@@ -75,7 +75,7 @@ const Intro: React.FC<IntroTextProps> = ({
     <div className="text-6xl text-center h-[200px] w-full mt-[120px] block">
       <span id={id}></span>
       <div className={`underscore ${isTyping ? "opacity-0" : ""}`} id="console">
-        {'_'}
+        {"_"}
       </div>
     </div>
   );

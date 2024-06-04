@@ -67,7 +67,7 @@ const About = () => {
                 </li>
                 <li>
                   <strong className="text-pink-500">
-                    Dean's List (CGA {'>'} 3.7/4) in 2022 and 2023 Fall Term 
+                    Dean's List (CGA {">"} 3.7/4) in 2022 and 2023 Fall Term
                   </strong>
                 </li>
               </ul>
