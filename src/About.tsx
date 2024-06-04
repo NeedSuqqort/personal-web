@@ -44,7 +44,7 @@ const About = () => {
           </Box>
         </Section>
 
-        <Box py={20}>
+        <Box py={10}>
           <hr className="line hidden" />
         </Box>
 
@@ -67,7 +67,7 @@ const About = () => {
                 </li>
                 <li>
                   <strong className="text-pink-500">
-                    Dean's List in 2022 and 2023 Fall Term
+                    Dean's List (CGA {'>'} 3.7/4) in 2022 and 2023 Fall Term 
                   </strong>
                 </li>
               </ul>
@@ -75,7 +75,7 @@ const About = () => {
           </Box>
         </Section>
 
-        <Box py={20}>
+        <Box py={10}>
           <hr className="line hidden" />
         </Box>
 
@@ -109,7 +109,7 @@ const About = () => {
           </Box>
         </Section>
 
-        <Box py={20}>
+        <Box py={10}>
           <hr className="line hidden" />
         </Box>
 

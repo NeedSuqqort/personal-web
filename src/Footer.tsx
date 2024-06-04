@@ -5,14 +5,14 @@ const Footer = () => {
   const date = new Date();
 
   return (
-    <Flex px={20} py={6} mt={6} bg={"#C89F9C"}>
+    <Flex px={20} py={6} mt={6} bg={"#C89F9C"} fontWeight={"Bold"}>
       <Stack direction="column">
         <Text>Oscar Law's personal web</Text>
         <Link to="/">
           <Text>Main page</Text>
         </Link>
-        <Link to="/about">
-          <Text>My profile</Text>
+        <Link to="/details">
+          <Text>More details</Text>
         </Link>
         <Spacer />
         <Text>© {date.getFullYear()} Oscar Law. All rights reserved.</Text>

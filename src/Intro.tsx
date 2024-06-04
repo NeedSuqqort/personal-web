@@ -72,10 +72,10 @@ const Intro: React.FC<IntroTextProps> = ({
   }, [colors, id, waiting, words, x, letterCount]);
 
   return (
-    <div className="text-4xl text-center h-[200px] w-full mt-[120px] block">
+    <div className="text-6xl text-center h-[200px] w-full mt-[120px] block">
       <span id={id}></span>
       <div className={`underscore ${isTyping ? "opacity-0" : ""}`} id="console">
-        &#95;
+        {'_'}
       </div>
     </div>
   );
