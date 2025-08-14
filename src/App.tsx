@@ -1,13 +1,10 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
-import MainPage from "./MainPage";
-import NotFound from "./NotFound";
-import Details from "./Details";
-const env = process.env.NODE_ENV;
+import MainPage from "./components/MainPage";
+import NotFound from "./components/NotFound";
+import Details from "./components/Details";
 
 function App() {
-  console.log(env);
-
   return (
     <BrowserRouter>
       <Routes>

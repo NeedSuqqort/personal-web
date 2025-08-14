@@ -1,5 +1,5 @@
 import { Box, Heading, Flex, Text, Tag } from "@chakra-ui/react";
-import { projectData } from "./constants";
+import { projectData } from "../constants";
 
 export default function Projects() {
   return (

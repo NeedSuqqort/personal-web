@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Box } from "@chakra-ui/react";
-import "./index.css";
+import "../style/index.css";
 
 const NotFound = () => {
   const navigate = useNavigate();

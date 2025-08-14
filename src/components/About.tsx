@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { Box, Spacer, Flex } from "@chakra-ui/react";
-import { topicsInterested } from "./constants";
-import "./index.css";
+import { topicsInterested } from "../constants";
+import "../style/index.css";
 import Projects from "./Projects";
 import { useInView } from "framer-motion";
-import Section from "./Section";
+import Section from "../Section";
 
 const About = () => {
   useEffect(() => {
