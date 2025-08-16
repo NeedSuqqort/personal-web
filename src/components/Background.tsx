@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import BIRDS from "vanta/dist/vanta.birds.min";
-import WAVES from "vanta/dist/vanta.waves.min";
 
 export default function Background() {
   const vantaRef = useRef(null);
