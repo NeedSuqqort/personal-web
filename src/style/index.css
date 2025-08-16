@@ -12,18 +12,22 @@ span,
   user-select: none;
 }
 
+body {
+  color: #ffffff;
+}
+
 .line {
   border: none;
   height: 12px;
   background: black;
 }
 
-.layout {
+/* .layout {
   position: relative;
   background-size: 200%;
   animation: bgGradient 4s ease-in-out infinite;
   background: linear-gradient(to bottom right, #eed7c5, #eee2df);
-}
+} */
 
 Button {
   margin-right: 1em;

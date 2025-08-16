@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react";
 import { Box, Spacer, Flex } from "@chakra-ui/react";
-import { topicsInterested } from "../constants";
+import { topicsInterested, aboutPageDesc } from "../constants/constants";
 import "../style/index.css";
 import Projects from "./Projects";
 import { useInView } from "framer-motion";
 import Section from "../Section";
+import { workExperience } from "../constants/work";
 
 const About = () => {
   useEffect(() => {
@@ -23,12 +24,7 @@ const About = () => {
             <h2 className="name">Name: Oscar Law</h2>
             <h2 className="ign">In-game name: NeedSupport</h2>
             <h2 className="desc-head">Description: </h2>
-            <pre className="desc">
-              I am a Year 3 computer science student who enjoys learning the
-              latest technology or cool stuffs in the Internet. I am also
-              passionate on programming and motivated to self-learn different
-              coding techniques.
-            </pre>
+            <pre className="desc">{aboutPageDesc}</pre>
             <pre className="interests">
               Interested fields:
               <ul>
@@ -37,14 +33,10 @@ const About = () => {
                 ))}
               </ul>
             </pre>
-            <pre className="note">
-              I am currently learning various front-end frameworks and tools
-              such as Next.js, Tailwind CSS, etc.
-            </pre>
           </Box>
         </Section>
 
-        <Box py={10}>
+        <Box py={5}>
           <hr className="line hidden" />
         </Box>
 
@@ -59,16 +51,21 @@ const About = () => {
             </h2>
             <pre>
               <ul>
-                <li>2021-2025</li>
-                <li>Expected to graduate in Summer 2025</li>
+                <li>2021 Sep - 2025 Jun</li>
+                <li>
+                  <strong className="text-red-500">First Class Honors</strong>
+                </li>
                 <li>
                   With an extended major on{" "}
                   <strong>Artifical intelligence(AI)</strong>
                 </li>
                 <li>
-                  <strong className="text-pink-500">
-                    Dean's List (CGA {">"} 3.7/4) in 2022 and 2023 Fall Term
-                  </strong>
+                  <span className="text-red-500 font-bold">
+                    Dean's List (CGA {">"} 3.7/4){" "}
+                  </span>
+                  <span>
+                    <strong>(2022 Fall, 2023 Fall, 2025 Spring)</strong>
+                  </span>
                 </li>
               </ul>
             </pre>
@@ -80,39 +77,35 @@ const About = () => {
         </Box>
 
         <Section>
-          <div className="education">
+          <div className="work-exp">
             <p className="about-subheading">Work Experience</p>
           </div>
-          <Box className="rounded-3xl" py={4}>
-            <Flex
-              direction="row"
-              className="min-w-full"
-              justify="space-between"
-            >
-              <h2 className="text-left">
-                Programmer Intern, TURNED-E! Company
-              </h2>
-              <h2 className="text-right">Dec 2023 - Feb 2024</h2>
-            </Flex>
-            <pre>
-              <ul>
-                <li>
-                  Gained hands-on experience on front-end developement and in
-                  touch with production code.
-                </li>
-                <li>
-                  Learnt some of the practices for software development projects
-                  and Git/GitHub
-                </li>
-              </ul>
-            </pre>
-          </Box>
+          {workExperience.map((work) => (
+            <Box className="rounded-3xl" py={4}>
+              <Flex
+                direction="row"
+                className="min-w-full"
+                justify="space-between"
+              >
+                <h2 className="text-left">
+                  {work.position}, {work.company}
+                </h2>
+                <h2 className="text-right">{work.duration}</h2>
+              </Flex>
+              <pre>
+                <ul>
+                  {work.responsibilities.map((item) => (
+                    <li className="font-xl my-4">{item}</li>
+                  ))}
+                </ul>
+              </pre>
+            </Box>
+          ))}
         </Section>
 
         <Box py={10}>
           <hr className="line hidden" />
         </Box>
-
         <Section>
           <Projects />
         </Section>

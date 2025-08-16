@@ -1,6 +1,6 @@
 import { Stack, Text, Flex, Spacer } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { socials } from "../constants";
+import { socials } from "../constants/constants";
 const Footer = () => {
   const date = new Date();
 

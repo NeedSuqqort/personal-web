@@ -1,5 +1,5 @@
 import { Box, Heading, Flex, Text, Tag } from "@chakra-ui/react";
-import { projectData } from "../constants";
+import { projectData } from "../constants/constants";
 
 export default function Projects() {
   return (
@@ -16,7 +16,7 @@ export default function Projects() {
             <Heading fontSize={"2xl"}>{project.title}</Heading>
             <pre className="indent-6">{project.desc}</pre>
             <Flex px={6}>
-              <Text>Language/Frameworks: </Text>
+              <Text className="font-bold">Language/Frameworks: </Text>
               {project.tools.map((tool) => (
                 <Tag
                   className="rounded-full mx-4"

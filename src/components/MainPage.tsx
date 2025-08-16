@@ -1,7 +1,7 @@
 import { Box, Spacer } from "@chakra-ui/react";
 import { useEffect } from "react";
 import Intro from "./Intro";
-import { mainPageIntro } from "../constants";
+import { mainPageIntro } from "../constants/constants";
 import Section from "../Section";
 import About from "./About";
 
