@@ -16,6 +16,7 @@ export default function Background() {
         minHeight: 200.0,
         minWidth: 200.0,
         scale: 1.0,
+        birdSize: 0.5,
         scaleMobile: 1.0,
         time: 1.0,
         THREE: (window as any).THREE,

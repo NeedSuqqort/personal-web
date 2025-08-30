@@ -1,13 +1,15 @@
-import { Stack, Text, Flex, Spacer } from "@chakra-ui/react";
+import { Stack, Text, Flex, Spacer, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { socials } from "../constants/constants";
+import { EmailIcon } from "@chakra-ui/icons";
+import { GitHubIcon, LinkedInIcon } from "./Icons";
 const Footer = () => {
   const date = new Date();
 
   return (
     <Flex px={20} py={6} mt={6} bg={"#C89F9C"} fontWeight={"Bold"}>
       <Stack direction="column">
-        <Text>Oscar Law's personal web</Text>
+        <Text>Oscar Law's personal Space</Text>
         <Link to="/">
           <Text>Main page</Text>
         </Link>
@@ -18,16 +20,28 @@ const Footer = () => {
         <Text>© {date.getFullYear()} Oscar Law. All rights reserved.</Text>
       </Stack>
       <Spacer />
-      <Stack direction="column">
-        <Text>Contacts</Text>
+      <Stack direction="row" spacing={1}>
+        <Text px={2}>Contacts:</Text>
         <a href={socials.email} target="_blank">
-          Email
+          <Button
+            color="blackAlpha"
+            variant="unstyled"
+            leftIcon={<EmailIcon />}
+          ></Button>
         </a>
         <a href={socials.linkedin} target="_blank">
-          LinkedIn
+          <Button
+            color="blackAlpha"
+            variant="unstyled"
+            leftIcon={<LinkedInIcon />}
+          ></Button>
         </a>
         <a href={socials.github} target="_blank">
-          GitHub
+          <Button
+            color="blackAlpha"
+            variant="unstyled"
+            leftIcon={<GitHubIcon />}
+          ></Button>
         </a>
       </Stack>
     </Flex>

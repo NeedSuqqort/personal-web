@@ -6,7 +6,7 @@ export const workExperience = [
     responsibilities: [
       "Assisted in developing a digital solution for improving collected data accuracy for sustainability analysis.",
       "Contributed in front-end web development work and enhanced user experience on company website",
-      "Collaborated with the development teams with Scrum and Scaled Agile Framework (SAFe) workflows",
+      "Developed UI components for the official website under the Scrum and Scaled Agile Framework (SAFe) workflows",
     ],
   },
   {
@@ -15,7 +15,7 @@ export const workExperience = [
     duration: "Dec 2023 - Feb 2024",
     responsibilities: [
       "Gained hands-on experience on front-end development and worked with production code.",
-      "Assisted in development of web-based applications for company's internal use.",
+      "Conducted tests and research on AI models such as DALL-E and FastGPT for web applications and company projects.",
     ],
   },
 ];

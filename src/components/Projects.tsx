@@ -14,7 +14,14 @@ export default function Projects() {
             my={4}
           >
             <Heading fontSize={"2xl"}>{project.title}</Heading>
-            <pre className="indent-6">{project.desc}</pre>
+            {project.desc.map((line, index) => (
+              <pre>
+                <li key={index} className="my-2">
+                  {line}
+                </li>
+              </pre>
+            ))}
+            {/* <Text className="text-justify">{project.desc}</Text> --- IGNORE --- */}
             <Flex px={6}>
               <Text className="font-bold">Language/Frameworks: </Text>
               {project.tools.map((tool) => (

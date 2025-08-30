@@ -14,15 +14,33 @@ export const projectData = [
   {
     id: 1,
     title: "Semtron website",
-    desc: "The website for a micro-electronic company. I contributed in adding new content and features to enhance the user experience.",
+    desc: [
+      "The website for a micro-electronic company.",
+      "Implemented new UI components and features to enhance the user experience.",
+      "Optimized the website for better representation and readability.",
+    ],
     tools: ["Typescript", "React.js", "Next.js"],
     url: "",
   },
   {
     id: 2,
     title: "ElmaGPT",
-    desc: "A platform for using ChatGPT and DALL-E with a Live2D model. Clients can interact with the VTuber-like model and ask questions.",
+    desc: [
+      "A platform for using ChatGPT and DALL-E with a Live2D model. Clients can interact with the VTuber-like model and ask questions.",
+      "Contributed to the development of an engaging and interactive user interface.",
+    ],
     tools: ["Typescript", "React.js", "Tailwind CSS"],
+    url: "",
+  },
+  {
+    id: 3,
+    title: "MAGE (Mage Assists Grading Efficiently)",
+    desc: [
+      "Assisted in training a question-type classification model with MLP architecture based on LLM-generated synthetic data (85% accuracy on real past exams)",
+      "Implemented semantic inconsistency detection using BERT embeddings extracted from user annotations and K-means clustering",
+      "Built a role-based access control (RBAC) system with Python and GraphQL, along with the corresponding enforcing logic and functions, supporting 4 distinct academic roles.",
+    ],
+    tools: ["Python", "PyTorch", "GraphQL", "Next.js", "Flask", "Docker"],
     url: "",
   },
 ];
