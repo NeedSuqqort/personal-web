@@ -3,11 +3,20 @@ import { Link } from "react-router-dom";
 import { socials } from "../constants/constants";
 import { EmailIcon } from "@chakra-ui/icons";
 import { GitHubIcon, LinkedInIcon } from "./Icons";
+import { useColor } from "./context/ColorModeContext";
+
 const Footer = () => {
   const date = new Date();
+  const { mode } = useColor();
 
   return (
-    <Flex px={20} py={6} mt={6} bg={"#C89F9C"} fontWeight={"Bold"}>
+    <Flex
+      px={20}
+      py={6}
+      mt={6}
+      bg={mode === "light" ? "#C89F9C" : "#B4887E"}
+      fontWeight={"Bold"}
+    >
       <Stack direction="column">
         <Text>Oscar Law's personal Space</Text>
         <Link to="/">

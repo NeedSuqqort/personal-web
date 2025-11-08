@@ -1,9 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Box, Spacer, Flex } from "@chakra-ui/react";
 import { topicsInterested, aboutPageDesc } from "../constants/constants";
 import "../style/index.css";
 import Projects from "./Projects";
-import { useInView } from "framer-motion";
 import Section from "../Section";
 import { workExperience } from "../constants/work";
 
@@ -11,9 +10,6 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const pos = useRef(null);
-  const inView = useInView(pos, { once: true });
-  console.log(inView);
 
   return (
     <Box minHeight={"100vh"}>

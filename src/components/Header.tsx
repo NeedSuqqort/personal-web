@@ -2,15 +2,15 @@ import { Box, Heading, Button, Flex, Icon, Stack } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, EmailIcon } from "@chakra-ui/icons";
 import "../style/index.css";
 import { GitHubIcon, LinkedInIcon } from "./Icons";
-import { useState } from "react";
 import { socials } from "../constants/constants";
 import { Link } from "react-router-dom";
+import { useColor } from "./context/ColorModeContext";
 
 export default function Header() {
-  const [isDark, setDark] = useState(true);
+  const { mode } = useColor();
 
   return (
-    <Box className="mb-6 top-0 z-50">
+    <Box className="mb-6 top-0 z-50 sticky bg-opacity-80 backdrop-blur-md">
       <Flex
         p={[6, 5, 6, 5]}
         direction="row"
@@ -48,9 +48,9 @@ export default function Header() {
             </Button>
           </a>
           <Icon
-            as={isDark ? SunIcon : MoonIcon}
+            as={mode === "dark" ? SunIcon : MoonIcon}
             boxSize="2.5em"
-            onClick={() => setDark(!isDark)}
+            onClick={useColor().toggleMode}
           />
         </Stack>
       </Flex>

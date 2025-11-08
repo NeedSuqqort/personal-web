@@ -1,15 +1,17 @@
 import { useEffect, useRef } from "react";
+import { useColor } from "./context/ColorModeContext";
 import BIRDS from "vanta/dist/vanta.birds.min";
 
 export default function Background() {
   const vantaRef = useRef(null);
   const effectRef = useRef<any>(null);
+  const { mode } = useColor();
 
   useEffect(() => {
     if (vantaRef.current && !effectRef.current) {
       effectRef.current = BIRDS({
         el: vantaRef.current,
-        backgroundColor: 0xeed7c5,
+        backgroundColor: mode === "light" ? 0xffffff : 0x123456,
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
@@ -28,7 +30,7 @@ export default function Background() {
         effectRef.current = null;
       }
     };
-  }, []);
+  }, [mode]);
 
   return (
     <div
