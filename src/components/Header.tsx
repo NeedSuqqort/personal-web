@@ -25,14 +25,18 @@ export default function Header() {
         </Link>
         <Stack direction={"row"} align={"center"}>
           <a href={socials.email} target="_blank">
-            <Button color="blackAlpha" variant="solid" leftIcon={<EmailIcon />}>
+            <Button
+              color="blackAlpha"
+              variant="subtle"
+              leftIcon={<EmailIcon />}
+            >
               Email
             </Button>
           </a>
           <a href={socials.linkedin} target="_blank">
             <Button
               color="blackAlpha"
-              variant="solid"
+              variant="subtle"
               leftIcon={<LinkedInIcon />}
             >
               LinkedIn
@@ -41,7 +45,7 @@ export default function Header() {
           <a href={socials.github} target="_blank">
             <Button
               color="blackAlpha"
-              variant="solid"
+              variant="subtle"
               leftIcon={<GitHubIcon />}
             >
               GitHub
