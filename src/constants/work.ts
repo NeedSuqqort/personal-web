@@ -1,12 +1,21 @@
 export const workExperience = [
   {
+    company: "China Mobile Hong Kong",
+    position: "Graduate Trainee",
+    duration: "Jul 2025 - Present",
+    responsibilities: [
+      "Assisted in developing an automated application with Python to periodically export network data for monitoring and analysis",
+      "Designed workflows with automation tools within the company to automate KPI updates",
+    ],
+  },
+  {
     company: "Cathay Pacific",
     position: "Digital & IT Intern",
     duration: "Jul 2024 - Aug 2024",
     responsibilities: [
-      "Assisted in developing a digital solution for improving collected data accuracy for sustainability analysis.",
-      "Contributed in front-end web development work and enhanced user experience on company website",
-      "Developed UI components for the official website under the Scrum and Scaled Agile Framework (SAFe) workflows",
+      "Assisted in developing a digital solution for automated data collection for sustainability analysis with both hardware and software components",
+      "Developed frontend web components and enhanced user experience in browsing the company website",
+      "Collaborated with the web development team under the Scrum and Scaled Agile Framework (SAFe) workflows",
     ],
   },
   {
@@ -14,8 +23,8 @@ export const workExperience = [
     position: "Programmer Intern",
     duration: "Dec 2023 - Feb 2024",
     responsibilities: [
-      "Gained hands-on experience on front-end development and worked with production code.",
-      "Conducted tests and research on AI models such as DALL-E and FastGPT for web applications and company projects.",
+      "Designed web components and informative web pages to promote the company’s business and enhancing user understanding of its business models",
+      "Conducted tests and research on AI models such as DALL-E and GPT for developing web applications and the company’s internal usage",
     ],
   },
 ];

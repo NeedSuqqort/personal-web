@@ -7,6 +7,7 @@ Text,
 p,
 h1,
 h2,
+h3,
 span,
 .waviy {
   user-select: none;
@@ -41,12 +42,18 @@ Button {
   margin-right: 1em;
 }
 
-h2 {
+h2,h3 {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: left;
   /* text-indent: 2rem;  */
   margin: 1rem 1.5rem 1rem 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-weight: normal;
 }
 
 pre {

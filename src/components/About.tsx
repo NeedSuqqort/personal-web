@@ -41,10 +41,8 @@ const About = () => {
             <p className="about-subheading">Education</p>
           </div>
           <Box className="rounded-3xl" p={5} my={10}>
-            <h2>
-              Bachelor of Engineering, Hong Kong University of Science and
-              Technology
-            </h2>
+            <h2>Bachelor of Engineering in Computer Science</h2>
+            <h3>Hong Kong University of Science and Technology</h3>
             <pre>
               <ul>
                 <li>2021 Sep - 2025 Jun</li>
